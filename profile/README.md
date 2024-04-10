@@ -1,6 +1,9 @@
-# NorthOne Inc
-
-> **Business banking made for America**
-> NorthOne makes the hardest parts of running your business easy.
-
-- [northone.com](https://www.northone.com)
+<hr />
+<div align="center">
+  <h1>NorthOne Inc</h1>
+  <p><strong>Connect every part of your business to one bank account</strong></p>
+  <p>
+    <a href="https://www.northone.com">www.northone.com</a>
+  </p>
+</div>
+<hr />
