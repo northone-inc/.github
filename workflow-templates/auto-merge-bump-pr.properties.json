@@ -1,5 +1,5 @@
 {
     "name": "Gitflow: Auto Merge Bump PR",
     "description": "NorthOne gitflow + any language repositories",
-    "iconName": "octicon feed-git-pull-request"
+    "iconName": "octicon feed-merged"
 }
