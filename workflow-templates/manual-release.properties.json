@@ -3,8 +3,7 @@
     "description": "For gitflow repositories",
     "iconName": "example-icon",
     "categories": [
-        "TypeScript",
-        "JavaScript"
+        "TypeScript"
     ],
     "filePatterns": [
         "package.json$"
