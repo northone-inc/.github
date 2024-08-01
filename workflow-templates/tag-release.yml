@@ -1,0 +1,22 @@
+# Triggered when code is pushed to the production branch.
+# This workflow grabs the version from the package.json file and creates a git tag eg. `v1.0.0`.
+
+name: Auto tag release version
+
+on:
+  push:
+    branches:
+      - production
+
+jobs:
+  tag_release:
+    name: tag release version
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: git checkout production
+      - name: Tag current version in git
+        run: |
+          TAG=v`jq -r .version < package.json`
+          git tag $TAG
+          git push origin $TAG --no-verify
