@@ -1,0 +1,46 @@
+# This workflow is triggered manually (eg. from the Github application) with a version number.
+# There are three tasks performed:
+# 1. Create a release branch, eg. release/1.0.0
+# 2. Bump the version in the release branch using npm, without setting a git tag
+# 3. Create 2 PRs to merge the release branch into the `production` branch and into the `main`/`master` branch
+
+name: Manual release workflow
+run-name: Release ${{ inputs.version }} by ${{ github.actor }}
+
+on:
+  # "workflow_dispatch" means it is triggered manually
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version number"
+        default: "0.0.0"
+        required: true
+        type: string
+
+jobs:
+  begin_release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Echo version
+        run: echo "Release version ${{ inputs.version }}"
+
+      - run: git checkout -b release/${{ inputs.version }}
+      - run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+      - run: npm version ${{ inputs.version }} --git-tag-version=false
+      - run: git diff
+      - run: git add package.json package-lock.json
+      - run: git commit -m "bump version ${{ inputs.version }}" --no-verify
+      - run: git push origin release/${{ inputs.version }} --no-verify
+
+      - name: create release pull request
+        run: "gh pr create -B production -H release/${{ inputs.version }} --title '🚛 RELEASE: version ${{ inputs.version }}' --body 'Created by Github action'"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: create version bump pull request
+        run: "gh pr create -B ${{ github.event.repository.default_branch }} -H release/${{ inputs.version }} --title '⬆️ Bump version to ${{ inputs.version }}' --body 'Created by Github action'"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
