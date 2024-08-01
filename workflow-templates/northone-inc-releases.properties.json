@@ -1,5 +1,5 @@
 {
-    "name": "NorthOne Nodejs Release Workflow",
+    "name": "Demo: NorthOne Nodejs Release Workflow",
     "description": "Release CI starter workflow.",
     "iconName": "example-icon",
     "categories": [
