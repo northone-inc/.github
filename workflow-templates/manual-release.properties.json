@@ -1,7 +1,7 @@
 {
-    "name": "NorthOne Nodejs Manual Release Workflow",
-    "description": "For gitflow repositories",
-    "iconName": "example-icon",
+    "name": "Gitflow: Manual Release Workflow",
+    "description": "NorthOne Nodejs For gitflow repositories",
+    "iconName": "octicon feed-rocket",
     "categories": [
         "TypeScript"
     ],
