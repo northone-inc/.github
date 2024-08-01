@@ -1,0 +1,12 @@
+{
+    "name": "NorthOne Nodejs Tag Release Workflow",
+    "description": "For gitflow repositories",
+    "iconName": "example-icon",
+    "categories": [
+        "TypeScript",
+        "JavaScript"
+    ],
+    "filePatterns": [
+        "package.json$"
+    ]
+}
