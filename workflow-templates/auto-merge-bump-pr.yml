@@ -1,0 +1,26 @@
+# Triggered when a PR is closed.
+# If the PR that was closed was a release PR targeting production,
+# then set the corresponding version bump PR to auto-merge.
+# The version bump PR that targets main/master will merge automatically when any user approves the PR.
+
+name: Gitflow: Auto-merge bump PR
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  merge_bump_pr:
+    name: merge bump PR
+    # only run this job when:
+    # - the PR targeted the production branch
+    # - the PR branch name started with release/
+    # - the PR was merged
+    if: github.ref_name == 'production' && startsWith(github.head_ref, 'release/') && github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enable auto-merge in the version bump PR
+        run: gh pr merge --merge --auto ${{ github.head_ref }}
+        env:
+          GH_TOKEN: ${{ github.token }}
