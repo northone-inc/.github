@@ -1,0 +1,15 @@
+{
+    "name": "NorthOne Nodejs Release Workflow",
+    "description": "NorthOne Organization CI starter workflow.",
+    "iconName": "example-icon",
+    "categories": [
+        "TypeScript",
+        "JavaScript",
+        "Nodejs"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
