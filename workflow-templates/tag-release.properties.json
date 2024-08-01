@@ -1,7 +1,7 @@
 {
     "name": "Gitflow: Tag Release Workflow",
     "description": "NorthOne Nodejs for gitflow repositories",
-    "iconName": "octoicon tag",
+    "iconName": "octicon tag",
     "categories": [
         "TypeScript",
         "JavaScript"
