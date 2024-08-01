@@ -1,5 +1,5 @@
 {
     "name": "NorthOne Agnostic Auto Merge Bump PR Workflow",
     "description": "for Gitflow repositories",
-    "iconName": "example-icon"
+    "iconName": "octicon git-pull-request"
 }
