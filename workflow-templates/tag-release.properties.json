@@ -2,10 +2,6 @@
     "name": "Gitflow Boilerplate - Tag Release Workflow",
     "description": "NorthOne Nodejs for gitflow repositories",
     "iconName": "octicon feed-tag",
-    "categories": [
-        "TypeScript",
-        "JavaScript"
-    ],
     "filePatterns": [
         "package.json$"
     ]
