@@ -1,0 +1,24 @@
+name: Use Nodejs GitFlow Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Release version number"
+        default: "1.0.0"
+        required: true
+        type: string
+
+  push:
+    branches:
+      - main
+
+  pull_request:
+    types: [closed]
+
+jobs:
+  use_shared_workflow_for_all_events:
+    uses: northone-inc/northone-github-workflows/.github/workflows/nodejs-gitflow-release.yml@main
+    with:
+      version: ${{ inputs.version }}
+      branch: main
