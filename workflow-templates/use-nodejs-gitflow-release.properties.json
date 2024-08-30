@@ -5,9 +5,8 @@
   "categories": [
     "TypeScript",
     "Deployment",
-    "CI/CD",
-    "Nodejs",
-    "Release Management"
+    "Continuous integration",
+    "Automation"
   ],
   "filePatterns": [
     "package.json$"

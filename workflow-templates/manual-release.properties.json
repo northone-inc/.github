@@ -2,9 +2,6 @@
     "name": "Gitflow Boilerplate - Manual Release Workflow",
     "description": "NorthOne Nodejs For gitflow repositories",
     "iconName": "octicon feed-rocket",
-    "categories": [
-        "TypeScript"
-    ],
     "filePatterns": [
         "package.json$"
     ]
