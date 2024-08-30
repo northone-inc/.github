@@ -1,15 +1,15 @@
 {
   "name": "Nodejs GitFlow Releases (Shared)",
   "description": "A reusable GitHub Actions workflow template to automate the release process for Node.js projects using GitFlow.",
-  "icon": "octicon feed-tag",
+  "iconName": "octicon feed-tag",
   "categories": [
+    "TypeScript",
     "Deployment",
     "CI/CD",
-    "Node.js",
+    "Nodejs",
     "Release Management"
   ],
-  "author": "NorthOne Inc",
   "filePatterns": [
-    "package.json"
+    "package.json$"
   ]
 }
