@@ -1,7 +1,7 @@
 {
-  "name": "Nodejs GitFlow Release Workflow Template",
+  "name": "Nodejs GitFlow Releases (Shared)",
   "description": "A reusable GitHub Actions workflow template to automate the release process for Node.js projects using GitFlow.",
-  "icon": "terminal",
+  "icon": "octicon feed-tag",
   "categories": [
     "Deployment",
     "CI/CD",

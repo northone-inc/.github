@@ -21,4 +21,3 @@ jobs:
     uses: northone-inc/northone-github-workflows/.github/workflows/nodejs-gitflow-release.yml@main
     with:
       version: ${{ inputs.version }}
-      branch: main
