@@ -1,6 +1,6 @@
 {
     "name": "Gitflow Boilerplate - Tag Release Workflow",
-    "description": "NorthOne Nodejs for gitflow repositories",
+    "description": "(Legacy, \"Nodejs GitFlow Releases (Shared)\" Recommended)\n\nNorthOne Nodejs for gitflow repositories",
     "iconName": "octicon feed-tag",
     "filePatterns": [
         "package.json$"
