@@ -1,5 +1,5 @@
 {
-    "name": "Gitflow: Tag Release Workflow",
+    "name": "Gitflow Boilerplate - Tag Release Workflow",
     "description": "NorthOne Nodejs for gitflow repositories",
     "iconName": "octicon feed-tag",
     "categories": [

@@ -1,5 +1,5 @@
 {
-    "name": "Gitflow: Manual Release Workflow",
+    "name": "Gitflow Boilerplate - Manual Release Workflow",
     "description": "NorthOne Nodejs For gitflow repositories",
     "iconName": "octicon feed-rocket",
     "categories": [
